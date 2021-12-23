@@ -62,13 +62,21 @@ services:
     networks:
       - laravel
 
-  yarn:
-    image: node:12.14
-    container_name: yarn
+  node:
+    image: node:12.13
+    container_name: node
     volumes:
       - ./:/var/www/html
+      - ./.certs/nginx-selfsigned.crt:/etc/ssl/certs/nginx-selfsigned.crt
+      - ./.certs/nginx-selfsigned.key:/etc/ssl/private/nginx-selfsigned.key
+      - ./.hosts:/etc/hosts
     working_dir: /var/www/html
-    entrypoint: ['yarn']
+    expose:
+      - "3000"
+    ports:
+      - "3000:3000"
+    entrypoint: ['node']
+    tty: true
     networks:
       - laravel
 

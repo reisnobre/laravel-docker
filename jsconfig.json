@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "module": "es2015",
+    "moduleResolution": "node",
+    "target": "es5",
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./resources/app/*"],
+      "@config/*": ["./resources/app/config/*"],
+      "@plugins/*": ["./resources/app/plugins/*"],
+      "@components/*": ["./resources/app/components/*"],
+      "@helpers/*": ["./resources/app/helpers/*"],
+      "@pages/*": ["./resources/app/pages/*"],
+      "@router/*": ["./resources/app/router/*"],
+      "@templates/*": ["./resources/app/templates/*"],
+      "@mixins/*": ["./resources/app/mixins/*"],
+      "@store/*": ["./resources/app/store/*"],
+      "@icons/*": ["./resources/app/assets/icons/*"],
+      "@img/*": ["./resources/app/assets/img/*"]
+    }
+  },
+  "include": ["./resources/**/*"]
+}
